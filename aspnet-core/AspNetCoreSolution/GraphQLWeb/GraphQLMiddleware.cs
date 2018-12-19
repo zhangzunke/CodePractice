@@ -45,6 +45,7 @@ namespace GraphQLWeb
                     {
                         doc.Schema = _schema;
                         doc.Query = request.Query;
+                        doc.Inputs = request.Variables.ToInputs();
                     }).ConfigureAwait(false);
 
                     var json = await _writer.WriteToStringAsync(result);

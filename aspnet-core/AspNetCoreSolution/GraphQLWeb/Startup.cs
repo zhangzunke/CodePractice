@@ -70,6 +70,8 @@ namespace GraphQLWeb
             //    await context.Response.WriteAsync(json);
             //});
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseMiddleware<GraphQLMiddleware>();
 
             /*
