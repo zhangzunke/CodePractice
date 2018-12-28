@@ -43,6 +43,12 @@ namespace GraphQLWeb.Data
                 SellingPrice = 100
             });
 
+            modelBuilder.Entity<Customer>().HasKey(p => p.CustomerId);
+            modelBuilder.Entity<Customer>().HasMany(p => p.Orders)
+                .WithOne()
+                .HasForeignKey(p => p.CustomerId);
+            modelBuilder.Entity<Order>().HasKey(p => p.OrderId);
+
             base.OnModelCreating(modelBuilder);
         }
     }
