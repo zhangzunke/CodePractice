@@ -22,6 +22,27 @@ namespace GraphQLWeb.Data
             modelBuilder.Entity<Item>().ToTable("Items");
             modelBuilder.Entity<Item>().HasKey(p => p.BarCode);
 
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                BarCode = "123",
+                Title = "Headphone",
+                SellingPrice = 50
+            });
+
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                BarCode = "456",
+                Title = "Keyboard",
+                SellingPrice = 40
+            });
+
+            modelBuilder.Entity<Item>().HasData(new Item
+            {
+                BarCode = "789",
+                Title = "Monitor",
+                SellingPrice = 100
+            });
+
             base.OnModelCreating(modelBuilder);
         }
     }

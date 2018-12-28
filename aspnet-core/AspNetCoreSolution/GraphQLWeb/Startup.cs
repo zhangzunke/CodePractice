@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Http;
 using GraphQL.Types;
+using GraphQLWeb.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +16,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore;
+using GraphQLWeb.GraphQlCollection;
 
 namespace GraphQLWeb
 {
@@ -30,10 +33,20 @@ namespace GraphQLWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(option => 
+            {
+                option.UseSqlServer(Configuration.GetConnectionString("SampleDB"));
+            });
+           
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
-            services.AddSingleton<HelloWorldQuery>();
-            services.AddSingleton<ISchema, HelloWorldSchema>();
+
+            services.AddScoped<ItemInputType>();
+            services.AddScoped<InventoryMutation>();
+            services.AddScoped<IDataStore, DataSource>();
+            services.AddScoped<InventoryQuery>();
+            services.AddScoped<ISchema, InventorySchema>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

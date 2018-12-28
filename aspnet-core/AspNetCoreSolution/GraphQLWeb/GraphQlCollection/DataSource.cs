@@ -1,31 +1,35 @@
-﻿using System;
+﻿using GraphQLWeb.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace GraphQLWeb.GraphQlCollection
 {
-    public class DataSource
+    public class DataSource : IDataStore
     {
-        public IList<Item> Items
+        private ApplicationDbContext _applicationDbContext;
+
+        public DataSource(ApplicationDbContext applicationDbContext)
         {
-            get;
-            set;
+            _applicationDbContext = applicationDbContext;
         }
 
-        public DataSource()
+        public Item GetItemByBarCode(string barCode)
         {
-            Items = new List<Item>()
-            {
-                new Item { BarCode= "123", Title="Headphone", SellingPrice=50},
-                new Item { BarCode= "456", Title="Keyboard", SellingPrice= 40},
-                new Item { BarCode= "789", Title="Monitor", SellingPrice= 100}
-            };
+            return _applicationDbContext.Items.First(i => i.BarCode.Equals(barCode));
         }
 
-        public Item GetItemByBarcode(string barcode)
+        public IEnumerable<Item> GetItems()
         {
-            return Items.First(i => i.BarCode.Equals(barcode));
+            return _applicationDbContext.Items;
+        }
+
+        public async Task<Item> AddItem(Item item)
+        {
+            var addedItem = await _applicationDbContext.Items.AddAsync(item);
+            await _applicationDbContext.SaveChangesAsync();
+            return addedItem.Entity;
         }
     }
 }

@@ -9,5 +9,6 @@ namespace GraphQLWeb.GraphQlCollection
     {
         IEnumerable<Item> GetItems();
         Item GetItemByBarCode(string barCode);
+        Task<Item> AddItem(Item item);
     }
 }

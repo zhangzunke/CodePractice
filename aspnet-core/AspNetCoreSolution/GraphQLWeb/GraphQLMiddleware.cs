@@ -16,19 +16,16 @@ namespace GraphQLWeb
         private readonly RequestDelegate _next;
         private readonly IDocumentWriter _writer;
         private readonly IDocumentExecuter _executor;
-        private readonly ISchema _schema;
         public GraphQLMiddleware(RequestDelegate next,
             IDocumentWriter writer,
-            IDocumentExecuter executor,
-            ISchema schema)
+            IDocumentExecuter executor)
         {
             _next = next;
             _writer = writer;
             _executor = executor;
-            _schema = schema;
         }
 
-        public async Task InvokeAsync(HttpContext httpContext)
+        public async Task InvokeAsync(HttpContext httpContext, ISchema schema)
         {
             if (httpContext.Request.Path.StartsWithSegments("/api/graphql")
                 && string.Equals(httpContext.Request.Method,
@@ -43,7 +40,7 @@ namespace GraphQLWeb
 
                     var result = await _executor.ExecuteAsync(doc =>
                     {
-                        doc.Schema = _schema;
+                        doc.Schema = schema;
                         doc.Query = request.Query;
                         doc.Inputs = request.Variables.ToInputs();
                     }).ConfigureAwait(false);

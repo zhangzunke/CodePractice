@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace GraphQLWeb
 {
-    public class HelloWorldSchema : Schema
+    public class InventorySchema : Schema
     {
-        public HelloWorldSchema(HelloWorldQuery query)
+        public InventorySchema(InventoryQuery query, InventoryMutation mutation)
         {
             Query = query;
+            Mutation = mutation;
         }
     }
 }
