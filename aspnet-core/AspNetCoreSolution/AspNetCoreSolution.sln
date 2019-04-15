@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GnericHostConsole", "GnericHostConsole\GnericHostConsole.csproj", "{DF916B31-0967-4AE7-8CF4-0122D98507A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLWeb", "GraphQLWeb\GraphQLWeb.csproj", "{F2E45D00-C722-4B5C-88FF-2B2D4D258E39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLWeb", "GraphQLWeb\GraphQLWeb.csproj", "{F2E45D00-C722-4B5C-88FF-2B2D4D258E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCore", "MiniCore\MiniCore.csproj", "{C4777964-D636-458A-9854-5809E0F46D0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F2E45D00-C722-4B5C-88FF-2B2D4D258E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E45D00-C722-4B5C-88FF-2B2D4D258E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E45D00-C722-4B5C-88FF-2B2D4D258E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4777964-D636-458A-9854-5809E0F46D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4777964-D636-458A-9854-5809E0F46D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4777964-D636-458A-9854-5809E0F46D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4777964-D636-458A-9854-5809E0F46D0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
