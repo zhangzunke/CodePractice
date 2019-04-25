@@ -9,7 +9,7 @@ namespace ConcurrentDemo
     class Program
     {
         private static ConcurrentQueue<Product> _Products { get; set; }
-
+        //BlockingCollection
         static void Main(string[] args)
         {
             //NewMethod();

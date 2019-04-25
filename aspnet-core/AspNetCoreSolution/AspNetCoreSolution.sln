@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLWeb", "GraphQLWeb\Gr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCore", "MiniCore\MiniCore.csproj", "{C4777964-D636-458A-9854-5809E0F46D0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentDemo", "ConcurrentDemo\ConcurrentDemo.csproj", "{C4ECEF1E-3BD2-41F4-91A1-E70E8D0A16D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcurrentDemo", "ConcurrentDemo\ConcurrentDemo.csproj", "{C4ECEF1E-3BD2-41F4-91A1-E70E8D0A16D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C4ECEF1E-3BD2-41F4-91A1-E70E8D0A16D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4ECEF1E-3BD2-41F4-91A1-E70E8D0A16D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4ECEF1E-3BD2-41F4-91A1-E70E8D0A16D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
