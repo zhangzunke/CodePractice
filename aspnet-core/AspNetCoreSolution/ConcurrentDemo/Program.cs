@@ -13,9 +13,21 @@ namespace ConcurrentDemo
         static void Main(string[] args)
         {
             //NewMethod();
+            //NewMethod1();
+            var list = new List<decimal>();
+            for (int i = 1; i <= 5; i++)
+            {
+                list.Add(i);
+            }
+            var s = Percentile(list.ToArray(), 0.95M);
+            Console.ReadLine();
+        }
+
+        private static void NewMethod1()
+        {
             int count = 0;
             var queue = new ConcurrentQueue<string>();
-            Task.Factory.StartNew(() => 
+            Task.Factory.StartNew(() =>
             {
                 while (true)
                 {
@@ -48,8 +60,22 @@ namespace ConcurrentDemo
 
                 }
             });
+        }
 
-            Console.ReadLine();
+        public static decimal Percentile(decimal[] sequence, decimal excelPercentile)
+        {
+            Array.Sort(sequence);
+            int N = sequence.Length;
+            decimal n = (N - 1) * excelPercentile + 1;
+            // Another method: double n = (N + 1) * excelPercentile;
+            if (n == 1M) return sequence[0];
+            else if (n == N) return sequence[N - 1];
+            else
+            {
+                int k = (int)n;
+                decimal d = n - k;
+                return sequence[k - 1] + d * (sequence[k] - sequence[k - 1]);
+            }
         }
 
         private static void NewMethod()
