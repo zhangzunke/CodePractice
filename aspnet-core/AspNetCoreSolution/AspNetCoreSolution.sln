@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcurrentDemo", "Concurren
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{A94998ED-9EB9-4FAB-AF37-2FDE09F99F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignarlrDemo", "SignarlrDemo\SignarlrDemo.csproj", "{B9BD1A5F-051E-491F-920B-D2E52DB6041D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignarlrDemo", "SignarlrDemo\SignarlrDemo.csproj", "{B9BD1A5F-051E-491F-920B-D2E52DB6041D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewFeaure", "NewFeaure\NewFeaure.csproj", "{71DC9307-6286-45FC-9E6C-85CC386F6EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pattern", "Pattern\Pattern.csproj", "{B9C690A4-514B-444E-9CE8-3690167EB748}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{B9BD1A5F-051E-491F-920B-D2E52DB6041D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9BD1A5F-051E-491F-920B-D2E52DB6041D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9BD1A5F-051E-491F-920B-D2E52DB6041D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71DC9307-6286-45FC-9E6C-85CC386F6EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DC9307-6286-45FC-9E6C-85CC386F6EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DC9307-6286-45FC-9E6C-85CC386F6EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DC9307-6286-45FC-9E6C-85CC386F6EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C690A4-514B-444E-9CE8-3690167EB748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C690A4-514B-444E-9CE8-3690167EB748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C690A4-514B-444E-9CE8-3690167EB748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C690A4-514B-444E-9CE8-3690167EB748}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,9 @@ namespace ConcurrentDemo
         //BlockingCollection
         static void Main(string[] args)
         {
+            var a = 10_000;
+            var b = 10000;
+            var c = a == b;
             //NewMethod();
             //NewMethod1();
             var list = new List<decimal>();
@@ -120,4 +123,7 @@ namespace ConcurrentDemo
         public string Category { get; set; }
         public int SellPrice { get; set; }
     }
+
+    public delegate void DelegateTest();
+
 }
