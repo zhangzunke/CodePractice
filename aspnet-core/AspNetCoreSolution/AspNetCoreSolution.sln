@@ -21,9 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pattern", "Pattern\Pattern.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{E2EDB039-878F-4964-99EB-6A0037B0CFA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQSend", "RabbitMQSend\RabbitMQSend.csproj", "{CD5243C5-C849-492C-99E1-321ADE4BE6AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQSend", "RabbitMQSend\RabbitMQSend.csproj", "{CD5243C5-C849-492C-99E1-321ADE4BE6AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQReceive", "RabbitMQReceive\RabbitMQReceive.csproj", "{DDED7822-19E4-4FDE-BB3C-8D446997B687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQReceive", "RabbitMQReceive\RabbitMQReceive.csproj", "{DDED7822-19E4-4FDE-BB3C-8D446997B687}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{3ADBF143-ABB8-47DE-A244-A5BAEE3B7166}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT_Demo", "JWT_Demo\JWT_Demo.csproj", "{4F9DBA8F-C0A2-4623-9E7F-059E3A534282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{DDED7822-19E4-4FDE-BB3C-8D446997B687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDED7822-19E4-4FDE-BB3C-8D446997B687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDED7822-19E4-4FDE-BB3C-8D446997B687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9DBA8F-C0A2-4623-9E7F-059E3A534282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9DBA8F-C0A2-4623-9E7F-059E3A534282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9DBA8F-C0A2-4623-9E7F-059E3A534282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9DBA8F-C0A2-4623-9E7F-059E3A534282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +86,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CD5243C5-C849-492C-99E1-321ADE4BE6AA} = {E2EDB039-878F-4964-99EB-6A0037B0CFA8}
 		{DDED7822-19E4-4FDE-BB3C-8D446997B687} = {E2EDB039-878F-4964-99EB-6A0037B0CFA8}
+		{4F9DBA8F-C0A2-4623-9E7F-059E3A534282} = {3ADBF143-ABB8-47DE-A244-A5BAEE3B7166}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07324952-DAD7-4FDC-B1B9-9B6CE96F9C3A}
