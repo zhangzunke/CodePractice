@@ -1,0 +1,17 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: k8s-net-pod
+  labels:
+    app: k8s-net-pod
+spec:
+  containers:
+    - name: web
+      image: k8sdemo
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 80
+      livenessProbe:
+        httpGet:
+          path: /home/checkhealth
+          port: 80
