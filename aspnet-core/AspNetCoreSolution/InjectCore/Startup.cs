@@ -29,6 +29,7 @@ namespace InjectCore
             services.AddSingleton<IFoobar, Foo>();
             services.AddSingleton<IFoobar, Bar>();
             services.AddSingleton<IFoobar, FoobarSelector>();
+            //services.BuildServiceProvider();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
