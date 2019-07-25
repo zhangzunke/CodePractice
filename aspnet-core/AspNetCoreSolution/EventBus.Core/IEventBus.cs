@@ -12,6 +12,6 @@ namespace EventBus.Core
         bool Unsubscribe<TEvent, TEventHanlder>()
             where TEventHanlder : IEventHandler<TEvent>
             where TEvent : IEventBase;
-        bool Pulish<TEvent>(TEvent @event) where TEvent : IEventBase;
+        bool Publish<TEvent>(TEvent @event) where TEvent : IEventBase;
     }
 }

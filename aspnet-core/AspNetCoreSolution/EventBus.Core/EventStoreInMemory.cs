@@ -16,13 +16,13 @@ namespace EventBus.Core
             var eventKey = GetEventKey<TEvent>();
             if (_eventHandlers.ContainsKey(eventKey))
             {
-                return _eventHandlers[eventKey].Add(typeof(IEventHandler<TEvent>));
+                return _eventHandlers[eventKey].Add(typeof(TEventHandler));
             }
             else
             {
                 return _eventHandlers.TryAdd(eventKey, new HashSet<Type>()
                 {
-                    typeof(IEventHandler<TEvent>)
+                    typeof(TEventHandler)
                 });
             }
         }
