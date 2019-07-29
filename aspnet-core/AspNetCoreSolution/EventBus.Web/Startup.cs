@@ -30,6 +30,7 @@ namespace EventBus.Web
             services.AddSingleton<IEventBus, Core.EventBus>();
             services.AddSingleton<IEventStore, EventStoreInMemory>();
             services.AddSingleton<NoticeViewEventHandler>();
+            services.AddSingleton<BlogViewEventHandler>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -37,6 +38,7 @@ namespace EventBus.Web
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IEventBus eventBus)
         {
             eventBus.Subscribe<NoticeViewEvent, NoticeViewEventHandler>();
+            eventBus.Subscribe<NoticeViewEvent, BlogViewEventHandler>();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

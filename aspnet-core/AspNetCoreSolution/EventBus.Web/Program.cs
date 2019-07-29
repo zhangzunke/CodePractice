@@ -14,6 +14,7 @@ namespace EventBus.Web
     {
         public static void Main(string[] args)
         {
+            WebHostDefaults.ContentRootKey;
             CreateWebHostBuilder(args).Build().Run();
         }
 
