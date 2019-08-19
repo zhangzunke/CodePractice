@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GnericHostConsole", "GnericHostConsole\GnericHostConsole.csproj", "{DF916B31-0967-4AE7-8CF4-0122D98507A3}"
 EndProject
@@ -57,7 +57,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{F8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Core", "EventBus.Core\EventBus.Core.csproj", "{3C5A8159-E841-4DD5-99F5-09E8BCCD67E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Web", "EventBus.Web\EventBus.Web.csproj", "{6334D096-65AB-4304-89EC-82499B4611FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Web", "EventBus.Web\EventBus.Web.csproj", "{6334D096-65AB-4304-89EC-82499B4611FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{EC259F4D-C420-4CB2-AC36-5FCE18B8FB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeryCacheDemo", "MemeryCacheDemo\MemeryCacheDemo.csproj", "{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,10 @@ Global
 		{6334D096-65AB-4304-89EC-82499B4611FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6334D096-65AB-4304-89EC-82499B4611FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6334D096-65AB-4304-89EC-82499B4611FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +180,7 @@ Global
 		{5334E111-229A-4850-852A-F8BC2BA573A7} = {19BC3D97-8ACF-422F-9AF1-1BF5C763DFE1}
 		{3C5A8159-E841-4DD5-99F5-09E8BCCD67E1} = {F860E028-81EE-4860-89AE-59298F36C843}
 		{6334D096-65AB-4304-89EC-82499B4611FC} = {F860E028-81EE-4860-89AE-59298F36C843}
+		{10BFA9C9-6E7A-4A99-AE6F-FC71E9BCA719} = {3ADBF143-ABB8-47DE-A244-A5BAEE3B7166}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07324952-DAD7-4FDC-B1B9-9B6CE96F9C3A}
