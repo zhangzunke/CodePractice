@@ -7,6 +7,6 @@ namespace EventBus.Core
 {
     internal interface IRedisWrapper
     {
-        IDataSerializer
+        
     }
 }
